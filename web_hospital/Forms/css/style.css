@@ -1,10 +1,19 @@
-/* Размещение формы на странице */
+/* Размещение формы на странице (авторизация, регистрация) */
 #table {
     width: 500px;
     height: 500px;
-    margin-left: 800px;
+    margin-left: 850px;
     margin-top: 300px;
     font-size: 25px;
+}
+
+/* Размещение формы на странице (дневник пациента) */
+#table2 {
+    width: 500px;
+    height: 500px;
+    margin-left: 300px;
+    margin-top: 150px;
+    font-size: 20px;
 }
 
 /* Фон на всю ширину окна браузера */
@@ -17,8 +26,45 @@ body {
 .text {
     text-align:left;
     font-size: 20px;
-    margin-left: 120px;
+    margin-left: 170px;
     margin-top: 150px;
-    padding-right: 100px;
+    padding-right: 200px;
     text-indent: 1.5em;
+}
+
+/* Фон и размер кнопок на шапке сайта*/
+ button.new {
+    position: absolute;
+    background: -moz-linear-gradient(#D0ECF4, #5BC9E1, #D0ECF4);
+    background: -webkit-gradient(linear, 0 0, 0  100%, from(#D0ECF4), to(#D0ECF4), color-stop(0.5, #5BC9E1));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00BBD6', endColorstr='#EBFFFF');
+    padding: 3px 7px;
+    color: #333;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    font-size: 30px;
+    left: 5.8%;
+    top: 0.2%;
+    height: 14.5%;
+    width: 10%;
+    border-radius: 5px;
+    border: 1px solid #666;
+}
+
+/* Фон и размер кнопок в кабинете пациента*/
+button.new2 {
+    position: absolute;
+    background: #1b9fd3;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00BBD6', endColorstr='#EBFFFF');
+    padding: 3px 7px;
+    color: #fff;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    font-size: 20px;
+    left: 5.8%;
+    top: 0.2%;
+    height: 8%;
+    width: 20%;
+    border-radius: 5px;
+    border: 1px solid #666;
 }
