@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Формы</title>
+        <meta http-equiv="Content-type" content="text/html;charset=UTF8" />
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+            ['Дата', 'Уровень глюкозы'], //Уровень глюкозы должен вводиться пользователем
+            ['2022-06-01',  70],
+            ['2022-06-02',  77],
+            ['2022-06-03',  75],
+            ['2022-06-04',  81],
+            ['2022-06-05',  70],
+            ['2022-06-06',  72],
+            ['2022-06-07',  73],
+            ['2022-06-08',  78],
+            ]);
+
+            var options = {
+            title: 'Уровень глюкозы',
+            curveType: 'function',
+            legend: { position: 'bottom' }
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+            chart.draw(data, options);
+        }
+        </script>
+
+        <script>
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Дата', 'Систалическое давление', 'Диасталическое давление'],
+          ['2022-06-01',  120, 60],
+          ['2022-06-02',  120, 80],
+          ['2022-06-03',  110, 92],
+          ['2022-06-04',  140, 77],
+          ['2022-06-05',  150, 90],
+          ['2022-06-06',  120, 60],
+          ['2022-06-07',  120, 60],
+          ['2022-06-08',  132, 90],
+        ]);
+
+        var options = {
+          title: 'Артериальное давление',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart2'));
+
+        chart.draw(data, options);
+      }
+    
+        </script>
+
+    </head>
+    <body>
+        <form action="index.html">
+            <p><button class="new" style="left: 9%;">Главная</button></p>
+        </form>
+        <form action="authorization_page.html">
+            <p><button class="new" style="left: 19%;">Авторизация</button></p>
+        </form>
+        <form action="helpful information.html">
+            <p><button class="new" style="left: 29%;">Полезная информация</button></p>
+        </form>
+        <form action="patient room.html">
+            <p><button class="new" style="left: 39%;">Кабинет пациента</button></p>
+        </form>
+        <form action="doctor's room.html">
+            <p><button class="new" style="left: 49%;">Кабинет врача</button></p>
+        </form>
+        <div style="text-align: center; font-weight: bold; font-size: 50px; margin-top: 200px;" class="text">
+            <p>Ваш дневник здоровья</p>
+        </div>
+        <div id="table2">
+            Дата <input style="width: 22%; height: 4%;" type="text" id="date"><br><br>
+            АД <input style="width: 10%; height: 4%;" type="text" id="pressure"> / <input style="width: 10%; height: 4%;" type="text" id="pressure"><br><br>
+            Глюкоза <input style="width: 22%; height: 4%;" type="text" id="sugar"><br><br>
+            <button style="font-size: 80%; width: 40%;">OK</button><br><br><br>
+            <div id="curve_chart" style="width: 1100px; height: 500px;"></div>
+            <div id="curve_chart2" style="width: 1100px; height:600px;"></div>
+        </div>
+        
+    </body>
+</html>
