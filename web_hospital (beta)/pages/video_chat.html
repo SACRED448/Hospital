@@ -3,9 +3,29 @@
     <head>
         <title>Формы</title>
         <meta http-equiv="Content-type" content="text/html;charset=UTF8" />
-
+        <script type="text/javascript" src="https://flashphoner.com/downloads/builds/flashphoner_client/wcs_api-2.0/current/flashphoner.js"></script>
+        <script type="text/javascript" src="video-chat-min.js"></script>
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
+    <style>
+        .fp-Video {
+            border: 1px double black;
+            width: 322px;
+            height: 242px;
+            margin-left: 280px;
+            margin-top: 180px;
+        }
+        .display {
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+        }
+        .display > video,
+        object {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
     <body>
         <form action="index.html">
             <p><button class="new" style="left: 9%;">Главная</button></p>
@@ -22,17 +42,14 @@
         <form action="doctor's room.html">
             <p><button class="new" style="left: 49%;">Кабинет врача</button></p>
         </form>
-        <form action="research result.html">
-            <p><button class="new2" style="left: 40%; margin-top: 17%;">Просмотр результатов исследований</button></p>
-        </form>
-        <form action="patient diary.html">
-            <button class="new2" style="left: 40%; margin-top: 23%;">Дневник здоровья</button>
-        </form>
-        <form action="the doctor's consultation.html">
-            <button class="new2" style="left: 40%; margin-top: 29%;">Консультация врача</button>
-        </form>
-        <form action="video_chat.html">
-            <button class="new2" style="left: 40%; margin-top: 35%;">Видеоконсультация врача</button>
-        </form>
+        
+        <div class="fp-Video">
+            <div id="local" class="display"></div>
+        </div>
+        <br />
+        <div class="fp-Video">
+            <div id="remote" class="display"></div>
+        </div>
+        <button class="new3" style="margin-left: 300px; width: 200px; margin-top: 10px;">Подключиться к консультации</button>
     </body>
 </html>

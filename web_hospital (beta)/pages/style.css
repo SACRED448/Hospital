@@ -3,7 +3,7 @@
     width: 600px;
     height: 500px;
     margin-left: 790px;
-    margin-top: 300px;
+    margin-top: 200px;
     font-size: 30px;
 }
 
@@ -100,3 +100,12 @@ button.new3 {
     border: 1px solid #666;
 }
 
+.colortext {
+    color: green; 
+  }
+
+#rectangle {
+	width: 200px;
+	height: 100px;
+	background: red;
+}
